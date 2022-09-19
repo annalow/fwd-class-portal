@@ -1,0 +1,106 @@
+body{
+    background-color: #333339;
+    color:#EFEFF0;
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin:0px;
+}
+
+a, a:visited, button{
+    all:unset;
+    text-decoration: none;   
+    color:inherit;
+    cursor:pointer;
+}
+
+.flex-container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    box-sizing: border-box;
+    margin:5vh;
+    padding:1vh;
+    height:90vh;
+    background-color:#242429;
+}
+
+.flex-item{
+    background-color: #131315;
+    flex-grow:1;
+    margin:5vh;
+    padding:1vh;
+}
+
+.flex-item:hover{
+    background-color: #333339;
+}
+
+#labs{
+    color:#fb5607;
+    background-color: none;
+}
+#projects{
+    color: #B264DD;
+    background-color: none;
+}
+#process{
+    color:#48b8d0;
+    border-color:#131315;
+}
+#code{
+    color:lightgreen;
+    border:none;
+}
+
+/* TABS STYLING */
+.flex-tab-container{
+    display:flex;
+    flex-flow:column nowrap;
+    box-sizing: border-box;
+    background-color: #131315;
+    height:94vh;
+}
+header{
+    display:flex;
+    background-color:#414149 ;
+    color:#EFEFF0;
+    justify-content:center;
+    align-items:center;
+    height:6vh;
+}
+
+.tab {
+    display:inherit;
+    flex-flow:row nowrap;
+    background-color: #333339;
+  }
+  
+  .tab-links{
+    display:inherit;
+    background-color: #242429;
+    transition: 0.3s;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding:5px;
+    border-right:  0.5vh solid #131315;
+  }
+  
+  .tab-links:hover {
+    background-color: #333339;
+  }
+  
+  .tab-content {
+    background-color:  #131315;
+    padding:5vh;
+  }
+
+  #default-content{
+    display:flex;
+  }
+
+  #labs-content{
+    display:none;
+  }
+
+  #projects-content{
+    display:none;
+  }
+
