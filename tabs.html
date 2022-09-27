@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Front-End Web Dev Portal</title>
         <link rel="stylesheet" href="main.css">
+        <script defer src="main.js"></script>
     </head>
 
     <header>
@@ -14,54 +15,25 @@
       <div class="flex-tab-container">
 
         <div class="tab">
-            <button class="tab-links" id="labs" onclick="tabClick(event, 'labs-tab')">&lt;labs&gt;</button>
-            <button class="tab-links" id="projects" onclick="tabClick(event, 'projects-tab')">&lt;projects&gt;</button>
+            <button class="tab-links" id="labs">&lt;labs&gt;</button>
+            <button class="tab-links" id="projects">&lt;projects&gt;</button>
             <a class="tab-links" id="process" href="https://annalowrimore.wordpress.com/category/front-end-web-dev/">&lt;process&gt;</a>
             <a class="tab-links" id="code" href="https://github.com/annalow?tab=stars">&lt;code&gt;</a>
         </div>
         
-        <div class="tab-content" id="default-content"></div>
+        <div class="tab-container" id="default-content"></div>
 
-        <div id="labs-content" class="tab-content">
-          <a href="https://js-and-dom.vercel.app/">Javascript and the DOM</a>
-          <a href="https://form-beryl-delta.vercel.app/">HTML Form</a>
+        <div id="labs-content" class="tab-container">
+          <a href="https://js-and-dom.vercel.app/" class="tab-items">Javascript and the DOM</a>
+          <a href="https://form-beryl-delta.vercel.app/" class="tab-items">HTML Form</a>
+          <a href="https://js-debugging-six.vercel.app/" class="tab-items">JS Debugging</a>
         </div>
         
-        <div id="projects-content" class="tab-content">
-          nothing to see here...
+        <div id="projects-content" class="tab-container">
+          <p class="tab-items">nothing to see here...</p>
         </div>
         
       </div>
-        
-      <script>
-        var divs = ["default-content", "labs-content", "projects-content"];
-        function tabClick(event) {
-          var clickedTab = event.srcElement.id;
-          console.log("this was the clicked tab "+clickedTab) //debug
-          var convertedTab = clickedTab + '-content';
-          console.log("this was the converted tab "+ convertedTab) //debug
-	        var i, tabName, tab;
-          for(i = 0; i < divs.length; i++) {
-              tabName = divs[i];
-              tab = document.getElementById(tabName);
-		
-              if(tabName === convertedTab) {
-                tab.style.display = "flex";
-                console.log("this tab was clicked")
-                document.getElementById(clickedTab).style.backgroundColor = '#131315';
-            } else {
-                tab.style.display = "none";
-                var idName = tabName.replace('-content', '');
-                document.getElementById(idName).style.backgroundColor = '#242429';
-                console.log("this is idNAME " + idName) //debug
-                console.log(typeof(idName)) //debug
-                console.log(document.getElementById(idName)) //debug
-            }
-          }
-          
-        }
-
-      </script>
         
       </div>
     </body>

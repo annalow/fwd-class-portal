@@ -87,9 +87,14 @@ header{
     background-color: #333339;
   }
   
-  .tab-content {
+  .tab-container {
     background-color:  #131315;
     padding:5vh;
+    flex-flow:column wrap;
+  }
+
+  .tab-items{
+    margin:2.5vh;
   }
 
   #default-content{
